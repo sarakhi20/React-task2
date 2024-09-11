@@ -1,0 +1,96 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.carousel-inner {
+  position: relative;
+  width: 300px; /* Add this line */
+  overflow: hidden;
+  margin: 0 auto; /* Add this line to center the carousel */
+}
+
+
+.carousel-item {
+  position: relative;
+  display: none;
+  width: 100%;
+  max-width: 600px; /* Add this line */
+  transition: transform 0.5s ease;
+}
+
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.carousel-item.active img {
+  animation: slide 0.5s ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.carousel-inner .carousel-item-next {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  transform: translateX(-100%);
+}
+
+.carousel-inner .carousel-item-prev {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  transform: translateX(100%);
+}
